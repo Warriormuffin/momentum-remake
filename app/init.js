@@ -1,9 +1,8 @@
 var app ={
   controllers: {
-    weatherController: new weatherController,
-    imageController: new imageController,
-    quoteController: new QuoteController,
-    todoController: new TodoController
-
+    weatherController: new WeatherController(),
+    imageController: new ImageController(),
+    quoteController: new QuoteController(),
+    todoController: new TodoController()
   }
 }

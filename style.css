@@ -2,8 +2,82 @@ body{
     background-image: url(https://unsplash.it/1920/1080/?random);
     background-repeat: no-repeat;
     -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
 }
+
+#quoterow{
+  color: white;
+  text-align: center;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+
+}
+
+.todo{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+.weather{
+  color: white;
+}
+
+.card.todolist button{
+  display: inline;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+}
+
+.todo-item{
+  text-align: left;
+  color: white;
+}
+.form-control{
+  border: 0px solid;
+  background-color: black
+}
+
+.card{
+  background-color: black;
+}
+
+.weather{
+  text-align: right;
+  top: 10px
+}
+.city-name{
+  position: absolute;
+  left: 150px;
+}
+
+i{
+  color: black;
+}
+
+p.clock-time{
+  text-align: center;
+  font-size: 100px;
+  color: white;
+}
+
+
+
+
+
+
+
+

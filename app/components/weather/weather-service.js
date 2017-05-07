@@ -17,6 +17,14 @@ function WeatherService() {
       callWhenDone(res)
     })
   }
+
+//  function changeWeather(res){
+//    debugger
+//    var fahrenheit = weather.main.temp * (9 /5 ) - 459.67
+//    var f = fahrenheit.toFixed(1)
+//    var celcius = weather.main.temp - 273.15
+//    var c = celcius.toFixed(1)
+//  }
 }
 
 

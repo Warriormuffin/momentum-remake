@@ -1,5 +1,7 @@
 function ClockController() {
   var clockService = new ClockService();
+
+    // Get actualy clock function to rerun on setTimeOut, currently not working
     function clock() {
     var time = new Date()
     var hr = time.getHours()
@@ -21,9 +23,22 @@ function ClockController() {
     if (sec < 10) {
       sec = "0" + sec
     }
-    document.getElementById('clock').innerHTML = `<p class="clock-time">${hr} : ${min}  ${ampm}</p>`
-    setTimeout("clockService()", 1000)
+    document.getElementById('clock').innerHTML = `<p class="clock-time">${hr} : ${min}  ${ampm}</p>
+    `
+    setTimeout(clock(), 1000)
+    name()
   }
   window.onload = clock;
+
+  function name(){
+    var template = "";
+    var elem = document.getElementById('hello')
+    template +=`
+      <p>Good Afternoon, Nathan</p>
+    `
+    elem.innerHTML = template
+  }
+
+  // Make name dynamic from what time it is, change greeting to reflect the time of the day (Morning(12:01-11.59), Afternoon(12:00-4:59), Evening(5:00-11:59))
 
 }

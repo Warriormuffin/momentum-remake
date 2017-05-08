@@ -1,2 +1,4 @@
-function ClockService(){
+function ClockService() {
+  debugger
+  // app.controllers.clockController.clock()
 }

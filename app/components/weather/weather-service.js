@@ -18,13 +18,18 @@ function WeatherService() {
     })
   }
 
-//  function changeWeather(res){
-//    debugger
-//    var fahrenheit = weather.main.temp * (9 /5 ) - 459.67
-//    var f = fahrenheit.toFixed(1)
-//    var celcius = weather.main.temp - 273.15
-//    var c = celcius.toFixed(1)
-//  }
+   this.changeWeatherToF = function changeWeatherToF(weather){
+   var fahrenheit = weather.main.temp * (9 /5 ) - 459.67
+   var f = fahrenheit.toFixed(0)
+   app.controllers.weatherController.reDrawWeatherToF(f)
+ }
+
+  this.changeWeatherToC = function changeWeatherToC(weather){
+     var celcius = weather.main.temp - 273.15
+     var c = celcius.toFixed(0)
+     app.controllers.weatherController.reDrawWeatherToC(c)
+
+  }
 }
 
 

@@ -14,5 +14,8 @@ function TodoService(){
 				//^^^ Less typical but todos should always be the entire array
 		localStorage.setItem('todo', JSON.stringify(todos));
 		console.log('Todo Data Saved:', todos);
+
+				// make it so you can't add empty strings to your todo array
+				//add todo count to card
 	}
 }

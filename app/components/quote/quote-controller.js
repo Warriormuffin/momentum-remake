@@ -8,8 +8,8 @@ function QuoteController(){
       var template ="";
       var elem = document.getElementById('quote')
       template += `
-        <h6>${quote.quote}</h6>
-        <p>${quote.author}</p>
+        <h6 class="stuff">${quote.quote}</h6>
+        <p class="author" style="visibility: hidden;">${quote.author}</p>
       `
       elem.innerHTML = template
     }

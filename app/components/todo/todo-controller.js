@@ -18,11 +18,10 @@ function TodoController(){
     var template = '';
     var elem = document.getElementById('todolist')
     for (var i = 0; i < todosArray.length; i++) {
-      debugger
 
       var todo = todosArray[i];
       template += `
-        <h6 class="todo-item" onclick="app.controllers.todoController.deleteTodo('${todo}')">${todo}</h6>
+        <h6 class="todo-item" onclick="app.controllers.todoController.deleteTodo('${todo}')"><i class="fa fa-circle-o" aria-hidden="true"></i> ${todo}</h6>
       `
     }
     elem.innerHTML = template

@@ -43,8 +43,8 @@ body {
 }
 
 .todo-item{
-  text-align: left;
   color: white;
+  text-align: left;
 }
 .form-control{
   border: 0px solid;
@@ -72,6 +72,28 @@ p.clock-time{
   text-align: center;
   font-size: 100px;
   color: white;
+}
+
+.form-control:focus {
+    outline: none !important;
+    border-color: black;
+    /*box-shadow: 0 0 10px #719ECE;*/
+    background-color: black;
+}
+
+.fa-circle-o{
+  color: white;
+  font-size: 12px;
+}
+
+.hello {
+  text-align: center;
+  color: white;
+  font-size: 45px;
+}
+
+.stuff:hover ~ .author{
+  visibility: visible;
 }
 
 

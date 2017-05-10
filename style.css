@@ -1,5 +1,5 @@
 body{
-    background-image: url(https://unsplash.it/1920/1080/?random);
+    background-image: url(https://unsplash.it/g/1920/1080/?random);
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -92,9 +92,6 @@ p.clock-time{
   font-size: 45px;
 }
 
-.stuff:hover ~ .author{
-  visibility: visible;
-}
 
 
 

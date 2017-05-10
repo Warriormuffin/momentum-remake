@@ -14,27 +14,37 @@ function ClockController() {
     if (hr > 12) {
       hr -= 12
     }
-    if (hr < 10) {
-      hr = " " + hr
-    }
+    // if (hr < 10) {
+    //   hr = " " + hr
+    // }
     if (min < 10) {
       min = "0" + min
     }
     if (sec < 10) {
       sec = "0" + sec
     }
-    document.getElementById('clock').innerHTML = `<p class="clock-time">${hr} : ${min}  ${ampm}</p>
+    document.getElementById('clock').innerHTML = `<p class="clock-time">${hr} : ${min}</p> <pclass="am-or-pm">${ampm}</p>
     `
-    setTimeout(clock(), 1000)
-    name()
+    setTimeout(clock, 1000)
+    name(hr, min, ampm)
   }
   window.onload = clock;
 
-  function name(){
+  function name(hr, min, ampm){
+
+    var greeting = '';
+    if(hr >= 5 && hr < 12 && ampm == ' AM '){
+      greeting = 'Morning'
+    }else if(hr < 5 && ampm == ' PM '){
+      greeting = 'Afternoon'
+    }else{
+      greeting = 'Evening'
+    }
+
     var template = "";
     var elem = document.getElementById('hello')
     template +=`
-      <p>Good Afternoon, Nathan</p>
+      <p>Good ${greeting}, Nathan.</p>
     `
     elem.innerHTML = template
   }

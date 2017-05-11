@@ -23,7 +23,7 @@ function ClockController() {
     if (sec < 10) {
       sec = "0" + sec
     }
-    document.getElementById('clock').innerHTML = `<p class="clock-time">${hr} : ${min}</p> <pclass="am-or-pm">${ampm}</p>
+    document.getElementById('clock').innerHTML = `<p class="clock-time">${hr} : ${min}</p>
     `
     setTimeout(clock, 1000)
     name(hr, min, ampm)
@@ -34,11 +34,11 @@ function ClockController() {
 
     var greeting = '';
     if(hr >= 5 && hr < 12 && ampm == ' AM '){
-      greeting = 'Morning'
-    }else if(hr < 5 && ampm == ' PM '){
-      greeting = 'Afternoon'
+      greeting = 'morning'
+    }else if(hr < 5 || hr == 12 && ampm == ' PM '){
+      greeting = 'afternoon'
     }else{
-      greeting = 'Evening'
+      greeting = 'evening'
     }
 
     var template = "";
@@ -48,7 +48,4 @@ function ClockController() {
     `
     elem.innerHTML = template
   }
-
-  // Make name dynamic from what time it is, change greeting to reflect the time of the day (Morning(12:01-11.59), Afternoon(12:00-4:59), Evening(5:00-11:59))
-
 }

@@ -1,5 +1,5 @@
 body{
-    background-image: url(https://unsplash.it/g/1920/1080/?random);
+    background-image: url(https://unsplash.it/1920/1080/?random);
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -48,7 +48,7 @@ body {
 }
 .form-control{
   border: 0px solid;
-  background-color: black
+  background-color: black;
 }
 
 .card{
@@ -65,7 +65,7 @@ body {
 }
 
 i{
-  color: black;
+  color: white;
 }
 
 p.clock-time{
@@ -90,6 +90,20 @@ p.clock-time{
   text-align: center;
   color: white;
   font-size: 45px;
+}
+
+.clock-time{
+  font-weight: bolder;
+}
+
+.card-header{
+  padding: .0rem 1.25rem;
+  background: black;
+}
+
+.weather-icon{
+  width: 35px;
+  height: 35px
 }
 
 

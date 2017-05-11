@@ -6,6 +6,7 @@ function WeatherController() {
   })
 
   function drawWeather(weather) {
+    debugger
     console.log(weather)
     var fahrenheit = weather.main.temp * (9 / 5) - 459.67
     var f = fahrenheit.toFixed(0)
@@ -14,7 +15,7 @@ function WeatherController() {
     template += `
         <div>
           <div>
-            <h4 onclick="app.controllers.weatherController.changeWeather(this)" ><i class="fa fa-cloud" aria-hidden="true" <style></i> ${f} F</h4>
+            <h4 onclick="app.controllers.weatherController.changeWeather(this)"><img class="weather-icon" src="http://openweathermap.org/img/w/${weather.weather[0].icon}.png">${f}F</h4>
             <p class="city-name">${weather.name}</p>
           </div>
         </div>
@@ -49,7 +50,7 @@ function WeatherController() {
       template += `
         <div>
           <div>
-            <h4 onclick="app.controllers.weatherController.changeWeather(this)" ><i class="fa fa-cloud" aria-hidden="true" <style></i> ${temp} ${f}</h4>
+            <h4 onclick="app.controllers.weatherController.changeWeather(this)"><img class="weather-icon" src="http://openweathermap.org/img/w/${weather.weather[0].icon}.png">${temp} ${f}</h4>
             <p class="city-name">${weather.name}</p>
           </div>
         </div>
@@ -67,7 +68,7 @@ function WeatherController() {
       template += `
         <div>
           <div>
-            <h4 onclick="app.controllers.weatherController.changeWeather(this)" ><i class="fa fa-cloud" aria-hidden="true" <style></i> ${temp} ${c}</h4>
+            <h4 onclick="app.controllers.weatherController.changeWeather(this)"><img class="weather-icon" src="http://openweathermap.org/img/w/${weather.weather[0].icon}.png">${temp} ${c}</h4>
             <p class="city-name">${weather.name}</p>
           </div>
         </div>
@@ -76,6 +77,8 @@ function WeatherController() {
     })
 
   }
+
+
 
 
 

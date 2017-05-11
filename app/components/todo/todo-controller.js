@@ -12,6 +12,7 @@ function TodoController(){
     e.target.todo.value = ""
 		todoService.saveTodos(todosArray)
     drawTodos(todosArray)
+    drawTodosLength(todosArray)
 	}
 
   function drawTodos(todosArray){
@@ -25,6 +26,16 @@ function TodoController(){
       `
     }
     elem.innerHTML = template
+    drawTodosLength(todosArray)
+  }
+
+  function drawTodosLength(todosArray){
+    var template = '';
+    var elem = document.getElementById('card-header')
+      template += `
+        <p>${todosArray.length} Todos</p>
+      `
+      elem.innerHTML = template
   }
 
   this.deleteTodo = function deleteTodo(todo){
